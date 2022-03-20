@@ -1,0 +1,113 @@
+commit 2ce15996d680ec4da46b6360f849131c354a0de7
+Author: Sohvi Puska <sohvip1@gmail.com>
+Date:   Sun Mar 20 11:09:19 2022 +0200
+
+    poisto ja uusi nimi
+
+ tiedostoja/file2.txt                 | 0
+ tiedostoja/{file1.txt => file22.txt} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 9cb70558208917d41779981be512e568a042531f
+Author: Sohvi Puska <sohvip1@gmail.com>
+Date:   Sun Mar 20 11:03:25 2022 +0200
+
+    uusia tiedostoja
+
+ tiedostoja/file1.txt | 0
+ tiedostoja/file2.txt | 0
+ tiedostoja/file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 3690f2061593229e2698b2c8718a992e98dee192
+Author: Sohvi Puska <sohvip1@gmail.com>
+Date:   Sat Mar 19 23:31:00 2022 +0200
+
+    muutosta
+
+ eka.txt    | 6 +++---
+ kolmas.txt | 2 +-
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+commit a809f62e05436607daad6fbd6bf26f4111beaa94
+Author: Sohvi Puska <sohvip1@gmail.com>
+Date:   Sat Mar 19 23:27:57 2022 +0200
+
+    uudelleennimentä
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 0831ae21f4161513377bff8e90393faac5d4f722
+Author: Sohvi Puska <sohvip1@gmail.com>
+Date:   Sat Mar 19 23:26:01 2022 +0200
+
+    poisto
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 29d23d1544025cfb511c4814150b7fce5f5c511e
+Author: Sohvi Puska <sohvip1@gmail.com>
+Date:   Sat Mar 19 23:22:48 2022 +0200
+
+    taas muutos
+
+ tiedosto.txt | 16 +---------------
+ 1 file changed, 1 insertion(+), 15 deletions(-)
+
+commit 24eac6cbde2f73d04847d263117581893f36bd4d
+Author: Sohvi Puska <sohvip1@gmail.com>
+Date:   Sat Mar 19 23:20:28 2022 +0200
+
+    paljon tekstiä
+
+ tiedosto.txt | 31 +++++++++++++++++++++++++++++++
+ 1 file changed, 31 insertions(+)
+
+commit 86c7ee8cd8b6f16d95ff1722e91ea1416ac21bfb
+Author: Sohvi Puska <sohvip1@gmail.com>
+Date:   Sat Mar 19 23:14:22 2022 +0200
+
+    hakemisto ja tiedosto
+
+ stuff/tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 3b84a75d57ee8d6c9e388367b3a211c143274002
+Author: Sohvi Puska <sohvip1@gmail.com>
+Date:   Sat Mar 19 23:12:52 2022 +0200
+
+    muutoksia
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit e728791da2048878cfa6f0ed5f2a26c9a0672e95
+Author: Sohvi Puska <sohvip1@gmail.com>
+Date:   Sat Mar 19 23:11:53 2022 +0200
+
+    lisäys
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ceffed9abb995330b2c766a3d86d482623ca981d
+Author: Sohvi Puska <sohvip1@gmail.com>
+Date:   Sat Mar 19 23:09:33 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit ed168c81bf2261c8a52dcae9905d7c50cf454713
+Author: Sohvi Puska <sohvip1@gmail.com>
+Date:   Sat Mar 19 23:06:15 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)

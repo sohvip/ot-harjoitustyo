@@ -4,6 +4,6 @@
       Pelinappula -- Ruutu
       Pelinappula -- Pelaaja
       Ruutu -- Seuraava_Ruutu
-      Ruutu -- Pelilauta
+      Ruutu "40" -- "1" Pelilauta
       
 ```

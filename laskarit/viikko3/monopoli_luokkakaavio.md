@@ -1,6 +1,6 @@
 ```mermaid
   classDiagram
-      Noppa -- Pelinappula
+      Nopat -- Pelinappula
       Pelinappula -- Ruutu
       Pelinappula -- Pelaaja
       Ruutu -- Seuraava_Ruutu

@@ -3,7 +3,7 @@
       Nopat -- Pelinappula
       Pelinappula -- Ruutu
       Pelinappula "1" -- "1" Pelaaja
-      Ruutu -- Seuraava_Ruutu
+      Ruutu --> Seuraava_Ruutu
       Ruutu -- Aloitusruutu
       Ruutu -- Vankila
       Ruutu -- Sattuma_ja_Yhteismaa

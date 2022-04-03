@@ -3,7 +3,7 @@
       Noppa -- Pelinappula
       Pelinappula -- Ruutu
       Pelinappula -- Pelaaja
-      Ruutu -- Seuraava ruutu
+      Ruutu -- Seuraava_ruutu
       Ruutu -- Pelilauta
       
 ```

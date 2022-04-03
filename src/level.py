@@ -4,6 +4,7 @@ screen = pygame.display.set_mode((640,480))
 pygame.display.set_caption('Starkour')
 
 def level():
+
     bg = pygame.image.load('assets/background.png')
     bg_x = 0
 

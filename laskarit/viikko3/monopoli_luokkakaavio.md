@@ -1,4 +1,4 @@
 ```mermaid
   classDiagram
-      Nopat --> Pelaajat
+      Nopat -- Pelaajat
 ```

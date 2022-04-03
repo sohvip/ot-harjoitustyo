@@ -2,7 +2,7 @@
   classDiagram
       Nopat -- Pelinappula
       Pelinappula -- Ruutu
-      Pelinappula -- Pelaaja
+      Pelinappula "1" -- "1" Pelaaja
       Ruutu -- Seuraava_Ruutu
       Ruutu -- Aloitusruutu
       Ruutu -- Vankila

@@ -1,9 +1,9 @@
 ```mermaid
   classDiagram
-      Noppa "2" -- "2-8" Pelaajat
-      Pelaajat -- Pelilauta
-      Pelilauta -- Ruutu
-      Ruutu -- Seuraava ruutu
-      Pelaajat -- Pelinappula
+      Noppa -- Pelinappula
       Pelinappula -- Ruutu
+      Pelinappula -- Pelaaja
+      Ruutu -- Seuraava ruutu
+      Ruutu -- Pelilauta
+      
 ```

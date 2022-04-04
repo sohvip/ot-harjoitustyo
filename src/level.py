@@ -9,7 +9,7 @@ def level():
     bg_x = 0
 
     starie = pygame.image.load('assets/starie.png')
-    starie = pygame.transform.rotozoom(starie,0,0.6)
+    starie = pygame.transform.rotozoom(starie,0,0.6)  
     starie_y = 318
     jump = 0
     fall = 1
@@ -36,7 +36,7 @@ def level():
         if bg_x <= -640:
             bg_x = 0
 
-        starie_rect = screen.blit(starie,(40,starie_y))
+        screen.blit(starie,(40,starie_y))
         if starie_y < 318:
             starie_y += fall
         if jump == 1:
@@ -46,7 +46,7 @@ def level():
                 jumping = 0
                 jump = 0
 
-        spike_rect = screen.blit(spike,(spike_x,351))
+        screen.blit(spike,(spike_x,351))
         spike_x -= spike_speed
 
         spike_rect2 = screen.blit(spike_2,(spike_x2,351))
@@ -58,18 +58,15 @@ def level():
             pygame.display.quit()
             exit()
 
-        #if starie_rect.colliderect(spike_rect) or starie_rect.colliderect(spike_rect):
-            #pygame.display.quit()
-            #exit()
-
         pygame.display.update()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.display.quit()
                 exit()
             if event.type == pygame.KEYDOWN:
-                if starie_y == 318:
-                    jump = 1
+                if event.key==pygame.K_SPACE:
+                    if starie_y == 318:
+                        jump = 1
 
 if __name__=="__main__":
     level()

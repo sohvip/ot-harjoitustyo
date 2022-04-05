@@ -1,3 +1,5 @@
+# HUOM
+Test- ja invoke-komennot toimivat vain src-hakemiston sisällä. Kävin ohte-pajassakin, mutta ongelmaa ei saatu ratkaistua. Esim. *poetry run invoke start* on annettava src-hakemiston sisällä, jotta se menee läpi.
 # Starkour  
 2D-tasohyppelypeli, jossa tähti nimeltä Starie yrittää läpäistä tasoja.
 ## Dokumentaatio 

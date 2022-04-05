@@ -1,10 +1,11 @@
 ```mermaid
   sequenceDiagram
       participant Main
-      participant kone
-      participant FuelTank
+      participant machine
+      participant tank
       participant Engine
-      Main ->> kone: Machine()
-      Main ->> kone: drive()
-      kone ->> Engine: start()
+      Main ->> machine: Machine()
+      machine ->> tank: FuelTank()
+      Main ->> machine: drive()
+      machine ->> Engine: start()
 ```

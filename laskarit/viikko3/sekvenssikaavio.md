@@ -3,10 +3,12 @@
       participant Main
       participant machine
       participant tank
+      participant FuelTank
       participant engine
       Main ->> machine: Machine()
       machine ->> tank: FuelTank()
-      machine ->> tank: fill(40)
+      machine ->> FuelTank: fill(40)
+      FuelTank -->> tank: fuel_contents(40)
       machine ->> engine: Engine(tank)
       Main ->> machine: drive()
       machine ->> engine: start()

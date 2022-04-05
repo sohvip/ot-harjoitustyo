@@ -40,10 +40,10 @@ class Play():
         self.starie=Starie()
         self.spike=Spike()
         self.goal=Goal()
-        self.clock=pygame.time.Clock()
+        #self.clock=pygame.time.Clock()
         #self.fps=60
 
-        self.gameloop()
+        #self.gameloop()
 
     def gameloop(self):
         while True:
@@ -58,8 +58,11 @@ class Play():
                 exit()
             if event.type==pygame.KEYDOWN:
                 if event.key==pygame.K_SPACE:
-                    if self.starie.y==318:
-                        self.starie.jump=1
+                    self.starie_jump()
+
+    def starie_jump(self):
+        if self.starie.y==318:
+            self.starie.jump=1
 
     def draw(self):
         self.draw_bg()
@@ -101,7 +104,5 @@ class Play():
         if self.goal.x<-25:
             pygame.display.quit()
             exit()
-        
-if __name__=="__main__":
-    Play()
-    
+
+     

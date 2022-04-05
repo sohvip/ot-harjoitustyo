@@ -9,5 +9,7 @@
       machine ->> tank: fill(40)
       machine ->> engine: Engine(tank)
       Main ->> machine: drive()
-      machine ->> Engine: start()
+      machine ->> engine: start()
+      engine ->> tank: consume(5)
+      
 ```

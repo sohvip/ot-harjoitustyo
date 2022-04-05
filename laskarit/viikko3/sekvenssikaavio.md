@@ -12,6 +12,6 @@
       machine ->> engine: Engine(tank)
       Main ->> machine: drive()
       machine ->> engine: start()
-      engine ->> tank: consume(5)
-      
+      engine ->> FuelTank: consume(5)
+      FuelTank -->> tank: fuel_contents(35)
 ```

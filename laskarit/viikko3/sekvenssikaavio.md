@@ -1,7 +1,8 @@
 ```mermaid
   sequenceDiagram
       participant Main
-      participant Machine
+      participant kone
       participant FuelTank
       participant Engine
+      Main -> kone: Machine()
 ```

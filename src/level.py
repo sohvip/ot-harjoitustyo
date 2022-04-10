@@ -1,13 +1,14 @@
-import pygame
+import pygame, sys
+from assets_route import BG_FILE_PATH, GOAL_FILE_PATH, STARIE_FILE_PATH, SPIKE_FILE_PATH
 
 class Bg():
     def __init__(self):
-        self.bg=pygame.image.load('assets/background.png')
+        self.bg=pygame.image.load(BG_FILE_PATH)
         self.x=0
 
 class Starie():
     def __init__(self):
-        self.starie=pygame.image.load('assets/starie.png')
+        self.starie=pygame.image.load(STARIE_FILE_PATH)
         self.starie=pygame.transform.rotozoom(self.starie,0,0.6)
         self.y=318
         self.jump=0
@@ -16,7 +17,7 @@ class Starie():
 
 class Spike():
     def __init__(self):
-        self.spike=pygame.image.load('assets/spike.png')
+        self.spike=pygame.image.load(SPIKE_FILE_PATH)
         self.spike=pygame.transform.rotozoom(self.spike,0,0.7)
         self.x=700
         self.x2=1300
@@ -24,7 +25,7 @@ class Spike():
 
 class Goal():
     def __init__(self):
-        self.goal=pygame.image.load('assets/goal.png')
+        self.goal=pygame.image.load(GOAL_FILE_PATH)
         self.goal=pygame.transform.rotozoom(self.goal,0,1.1)
         self.x=1700
         self.speed=1.3
@@ -55,7 +56,7 @@ class Play():
         for event in pygame.event.get():
             if event.type==pygame.QUIT:
                 pygame.display.quit()
-                exit()
+                sys.exit()
             if event.type==pygame.KEYDOWN:
                 if event.key==pygame.K_SPACE:
                     self.starie_jump()
@@ -103,6 +104,6 @@ class Play():
         self.goal.x-=self.goal.speed
         if self.goal.x<-25:
             pygame.display.quit()
-            exit()
+            sys.exit()
 
      

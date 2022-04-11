@@ -1,5 +1,5 @@
 # Starkour  
-2D-tasohyppelypeli, jossa tähti nimeltä Starie yrittää läpäistä tasoja.
+2D-tasohyppelypeli, jossa tavoitteena hypätä mahdollisimman monen esteen yli.
 ## Dokumentaatio 
 [vaatimusmaarittely.md](https://github.com/sohvip/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)  
 [tuntikirjanpito.md](https://github.com/sohvip/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)  

@@ -1,8 +1,10 @@
-from level import Play
+from start import Start
+
 
 def main():
-    play=Play()
-    play.gameloop()
+    start = Start()
+    start.start()
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     main()

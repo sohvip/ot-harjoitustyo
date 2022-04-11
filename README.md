@@ -12,3 +12,4 @@
 ## Testaaminen
 - testien suorittaminen: `poetry run invoke test`
 - testikattavuusraportti: `poetry run invoke coverage`
+- pylint: `poetry run invoke lint`

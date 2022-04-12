@@ -16,3 +16,7 @@ class TestLevel(unittest.TestCase):
         self.play.draw_spikes()
         self.assertEqual(self.play.score, 1)
     
+    def test_spike_move(self):
+        self.play.spike.x = -51
+        self.play.draw_spikes()
+        self.assertEqual(self.play.spike.x, 650)

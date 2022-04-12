@@ -6,5 +6,5 @@
 ## Viikko 4
 - aloitusnäyttö, jossa nappi pelin aloittamiseen
 - game over -näyttö, jossa näkyy pelaajan keräämät pisteet
-- uusi testi
+- uusia testejä
 - uusia taskeja

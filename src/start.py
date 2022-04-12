@@ -4,7 +4,7 @@ from level import Play, Starie
 from assets_route import PLAY_FILE_PATH
 
 
-class Start():
+class Start:
     def __init__(self):
         self.screen = pygame.display.set_mode((640, 480))
         self.screen.fill((125, 60, 152))

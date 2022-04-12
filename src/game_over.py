@@ -1,11 +1,11 @@
 import sys
 import pygame
 
-
 class End():
-    def __init__(self):
+    def __init__(self, score):
         self.screen = pygame.display.set_mode((640, 480))
         self.screen.fill((15, 15, 15))
+        self.score=score
 
     def end_screen(self):
         pygame.init()
@@ -18,7 +18,7 @@ class End():
         # pygame.draw.rect(self.screen,(255,255,255),pygame.Rect(260,220,60,60))
         # pygame.draw.rect(self.screen,(255,255,255),pygame.Rect(340,220,60,60))
         self.title()
-        # self.final_score()
+        self.final_score()
         pygame.display.update()
 
     def title(self):
@@ -27,11 +27,11 @@ class End():
         text = font.render('GAME OVER', False, color)
         self.screen.blit(text, (130, 80))
 
-    # def final_score(self):
-        # font=pygame.font.SysFont('suruma',30)
-        # color=(250,253,15)
-        #text=font.render(f'final score: {str(self.play.score)}',False,color)
-        # self.screen.blit(text,(240,220))
+    def final_score(self):
+        font=pygame.font.SysFont('suruma',30)
+        color=(250,253,15)
+        text=font.render(f'final score: {str(self.score)}',False,color)
+        self.screen.blit(text,(240,220))
 
     def get_events(self):
         for event in pygame.event.get():

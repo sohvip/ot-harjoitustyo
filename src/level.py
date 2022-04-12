@@ -4,13 +4,13 @@ from assets_route import BG_FILE_PATH, STARIE_FILE_PATH, SPIKE_FILE_PATH
 from game_over import End
 
 
-class Background():
+class Background:
     def __init__(self):
         self.background = pygame.image.load(BG_FILE_PATH)
         self.x = 0
 
 
-class Starie():
+class Starie:
     def __init__(self):
         self.starie = pygame.image.load(STARIE_FILE_PATH)
         self.starie = pygame.transform.rotozoom(self.starie, 0, 0.6)
@@ -20,7 +20,7 @@ class Starie():
         self.jumping = 0
 
 
-class Spike():
+class Spike:
     def __init__(self):
         self.spike = pygame.image.load(SPIKE_FILE_PATH)
         self.spike = pygame.transform.rotozoom(self.spike, 0, 0.6)
@@ -28,7 +28,7 @@ class Spike():
         self.speed = 1.5
 
 
-class Play():
+class Play:
     def __init__(self):
         self.screen = pygame.display.set_mode((640, 480))
         pygame.display.set_caption('Starkour')
@@ -39,6 +39,8 @@ class Play():
         self.clock = pygame.time.Clock()
         self.fps = 200
         self.score = 0
+        self.starie_r = 0
+        self.spike_r = 0
 
     def gameloop(self):
         pygame.init()
@@ -110,7 +112,7 @@ class Play():
 
     def collide(self):
         if self.starie_r.colliderect(self.spike_r):
-            end = End()
+            end = End(self.score)
             end.end_screen()
 
     def speed(self):

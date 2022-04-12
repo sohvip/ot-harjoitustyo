@@ -1,16 +1,18 @@
 import unittest
-import level
+from level import Play
 
 
 class TestLevel(unittest.TestCase):
     def setUp(self):
-        pass
+        self.play = Play()
 
     def test_jump(self):
-        play = level.Play()
-        play.starie_jump()
-        self.assertEqual(play.starie.jump, 1)
+        self.play.starie_jump()
+        self.assertEqual(self.play.starie.jump, 1)
 
-# Testi toimii vain, kun pytest-komentoa kutsuu src-hakemiston
-# sisällä komennolla pytest tests.
-# Ohte-pajassakin kävin, mutta sielläkään ei saatu toimimaan...
+    def test_score(self):
+        self.play.spike.x = -51
+        self.play.score = 0
+        self.play.draw_spikes()
+        self.assertEqual(self.play.score, 1)
+    

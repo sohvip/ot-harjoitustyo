@@ -1,6 +1,5 @@
 from start import Start
 
-
 def main():
     start = Start()
     start.start()

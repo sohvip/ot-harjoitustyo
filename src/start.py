@@ -43,6 +43,6 @@ class Start:
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if (event.pos[0] in range(int(self.x), int(self.x+self.button.get_width())) and
                         event.pos[1] in range(int(self.y), int(self.y+self.button.get_height()))):
-                    pygame.display.quit()
                     play = Play()
                     play.gameloop()
+                    pygame.display.quit()

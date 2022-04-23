@@ -114,6 +114,7 @@ class Play:
         if self.starie_r.colliderect(self.spike_r):
             end = End(self.score)
             end.end_screen()
+            pygame.display.quit()
 
     def speed(self):
         if self.score != 0 and self.score % 5 == 0:

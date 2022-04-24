@@ -2,6 +2,7 @@ import sys
 import pygame
 from assets_route import RESTART_FILE_PATH, HOME_FILE_PATH
 
+
 class End:
     def __init__(self, score):
         self.screen = pygame.display.set_mode((640, 480))
@@ -21,16 +22,14 @@ class End:
             self.get_events()
 
     def draw_screen(self):
-        #pygame.draw.rect(self.screen,(255,255,255),pygame.Rect(260,220,60,60))
-        #pygame.draw.rect(self.screen,(255,255,255),pygame.Rect(340,220,60,60))
         self.title()
         self.final_score()
         self.draw_buttons()
         pygame.display.update()
 
     def draw_buttons(self):
-        self.screen.blit(self.restart,(310-self.width,260))
-        self.screen.blit(self.home,(330,260))
+        self.screen.blit(self.restart, (310-self.width, 260))
+        self.screen.blit(self.home, (330, 260))
 
     def title(self):
         font = pygame.font.SysFont('suruma', 60, True)
@@ -39,10 +38,10 @@ class End:
         self.screen.blit(text, (130, 80))
 
     def final_score(self):
-        font=pygame.font.SysFont('suruma',30)
-        color=(250,253,15)
-        text=font.render(f'final score: {str(self.score)}',False,color)
-        self.screen.blit(text,(240,180))
+        font = pygame.font.SysFont('suruma', 30)
+        color = (250, 253, 15)
+        text = font.render(f'final score: {str(self.score)}', False, color)
+        self.screen.blit(text, (240, 180))
 
     def get_events(self):
         for event in pygame.event.get():
@@ -50,18 +49,17 @@ class End:
                 pygame.display.quit()
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
-                if event.pos[0] in range(310-self.width,310) and event.pos[1] in range(260,260+self.width):
+                if (event.pos[0] in range(310-self.width, 310) and
+                event.pos[1] in range(260, 260+self.width)):
                     from level import Play
                     play = Play()
                     play.gameloop()
                     pygame.display.quit()
 
             if event.type == pygame.MOUSEBUTTONDOWN:
-                if event.pos[0] in range(330,330+self.width) and event.pos[1] in range(260,260+self.width):
-                    from start import Start 
+                if (event.pos[0] in range(330, 330+self.width) and
+                event.pos[1] in range(260, 260+self.width)):
+                    from start import Start
                     start = Start()
                     start.start()
                     pygame.display.quit()
-
-#end = End(10)
-#end.end_screen()

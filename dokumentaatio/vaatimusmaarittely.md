@@ -10,5 +10,6 @@ Sovellus on 2D-tasohyppelypeli, jossa tarkoituksena on saada mahdollisimman kork
 - tason pelaaminen (tehty)
 - pistelaskuri (tehty)
 - esteeseen osuttaessa peli loppuu ja näkyviin tulee pelaajan keräämät pisteet (tehty)
+- pelin loppuessa pelaaja voi joko aloittaa uuden pelin tai palata aloitusnäyttöön (tehty)
 - jokaisessa tasossa pisimmälle edenneen suorituksen tallentaminen käyttäjätilille
 - uloskirjautuminen

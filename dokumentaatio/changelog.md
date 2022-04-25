@@ -8,3 +8,8 @@
 - game over -näyttö, jossa näkyy pelaajan keräämät pisteet
 - uusia testejä
 - uusia taskeja
+## Viikko 5
+- game over -näyttöön restart- ja home-napit
+- restart-nappia painamalla pelaaja voi aloittaa uuden pelin
+- home-nappia painamalla pelaaja voi palata alkunäkymään
+- uusia testejä

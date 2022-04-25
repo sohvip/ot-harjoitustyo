@@ -5,7 +5,7 @@
       Play --> Spike
       Play --> Background
       Play --> Starie
-      Play --> End   
+      Play --> end   
 ```
 # Sekvenssikaavio pelin kulusta
 ```mermaid
@@ -13,10 +13,10 @@
     actor User
     participant Start
     participant Play
-    participant End
+    participant .End
     User->>Start: click "play" button
     Start->>Play: gameloop()
     User->>Play: press SPACE
     Play->>Play: starie_jump()
-    Play->>End: end_screen()
+    Play->>.End: end_screen() (when player collides with an obstacle)
 ```

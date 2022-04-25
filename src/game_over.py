@@ -40,7 +40,8 @@ class End:
     def final_score(self):
         font = pygame.font.SysFont('suruma', 30)
         color = (250, 253, 15)
-        text = font.render(f'final score: {str(self.score)}', False, color)
+        sentence = f'final score: {str(self.score)}'
+        text = font.render(sentence, False, color)
         self.screen.blit(text, (240, 180))
 
     def get_events(self):

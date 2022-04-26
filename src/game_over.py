@@ -18,10 +18,10 @@ class End:
         pygame.init()
         pygame.display.set_caption('Starkour')
         while True:
-            self.draw_screen()
+            self.draw_endscreen()
             self.get_events()
 
-    def draw_screen(self):
+    def draw_endscreen(self):
         self.title()
         self.final_score()
         self.draw_buttons()
@@ -44,11 +44,11 @@ class End:
         text = font.render(sentence, False, color)
         self.screen.blit(text, (240, 180))
 
-    def get_events(self):
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.display.quit()
-                sys.exit()
+    def get_events(self): # pylint: disable=R0801
+        for event in pygame.event.get(): # pylint: disable=R0801
+            if event.type == pygame.QUIT: # pylint: disable=R0801
+                pygame.display.quit() # pylint: disable=R0801
+                sys.exit() # pylint: disable=R0801
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if (event.pos[0] in range(310-self.width, 310) and
                 event.pos[1] in range(260, 260+self.width)):

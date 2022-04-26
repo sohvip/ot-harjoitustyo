@@ -36,12 +36,12 @@ class Start:
         self.screen.blit(text, (60, 80))
         self.screen.blit(text_2, (270, 80))
 
-    def get_events(self):
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.display.quit()
-                sys.exit()
-            if event.type == pygame.MOUSEBUTTONDOWN:
+    def get_events(self): # pylint: disable=R0801
+        for event in pygame.event.get(): # pylint: disable=R0801
+            if event.type == pygame.QUIT: # pylint: disable=R0801
+                pygame.display.quit() # pylint: disable=R0801
+                sys.exit() # pylint: disable=R0801
+            if event.type == pygame.MOUSEBUTTONDOWN: # pylint: disable=R0801
                 if (event.pos[0] in
                 range(int(self.button_x), int(self.button_x+self.button.get_width())) and
                 event.pos[1] in

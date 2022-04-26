@@ -5,4 +5,4 @@
 |30.3.-5.4.|8 h|pelin aloittaminen ja ensimmäinen testi|
 |6.-12.4.|7 h|aloitus ja lopetusnäkymät tehty, pistelaskuri, lisää testejä, pylint käyttöön|
 |20.-26.4.|5 h|näkymien välillä liikkumista laajennettu, uusia testejä, koodin laadun parantamista|
-|yhteensä|15,5 h||
+|yhteensä|20,5 h||

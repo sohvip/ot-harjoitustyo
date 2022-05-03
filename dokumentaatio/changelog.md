@@ -13,3 +13,7 @@
 - restart-nappia painamalla pelaaja voi aloittaa uuden pelin
 - home-nappia painamalla pelaaja voi palata alkunäkymään
 - uusia testejä
+## Viikko 6
+- sisäänkirjautuminen ja uuden käyttäjän luominen mahdollistettu
+- käyttäjien tiedot tallentuvat tietokantaan
+- uusia testejä

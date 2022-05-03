@@ -44,14 +44,14 @@ class End:
         text = font.render(sentence, False, color)
         self.screen.blit(text, (240, 180))
 
-    def get_events(self): # pylint: disable=R0801
-        for event in pygame.event.get(): # pylint: disable=R0801
-            if event.type == pygame.QUIT: # pylint: disable=R0801
-                pygame.display.quit() # pylint: disable=R0801
-                sys.exit() # pylint: disable=R0801
+    def get_events(self):  # pylint: disable=R0801
+        for event in pygame.event.get():  # pylint: disable=R0801
+            if event.type == pygame.QUIT:  # pylint: disable=R0801
+                pygame.display.quit()  # pylint: disable=R0801
+                sys.exit()  # pylint: disable=R0801
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if (event.pos[0] in range(310-self.width, 310) and
-                event.pos[1] in range(260, 260+self.width)):
+                        event.pos[1] in range(260, 260+self.width)):
                     from level import Play
                     play = Play()
                     play.gameloop()
@@ -59,7 +59,7 @@ class End:
 
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if (event.pos[0] in range(330, 330+self.width) and
-                event.pos[1] in range(260, 260+self.width)):
+                        event.pos[1] in range(260, 260+self.width)):
                     from start import Start
                     start = Start()
                     start.start()

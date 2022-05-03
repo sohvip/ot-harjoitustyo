@@ -35,13 +35,13 @@ class TestLevel(unittest.TestCase):
         self.play.starie.s_y = 317
         self.play.starie_action()
         self.assertEqual(self.play.starie.s_y, 318)
-    
+
     def test_starie_action_2(self):
         self.play.starie.jump = 1
         self.play.starie_action()
         self.assertEqual(self.play.starie.s_y, 313)
         self.assertEqual(self.play.starie.jumping, 1)
-    
+
     def test_starie_action_3(self):
         self.play.starie.jump = 1
         self.play.starie.jumping = 41

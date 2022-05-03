@@ -1,13 +1,13 @@
-from user_interface.UI import UI
 from tkinter import Tk
+from user_interface.UI import UI
 
 
 def main():
     window = Tk()
     window.title('Starkour')
     window.geometry('640x480')
-    ui = UI(window)
-    ui.start()
+    sign_in = UI(window)
+    sign_in.start()
     window.mainloop()
 
 

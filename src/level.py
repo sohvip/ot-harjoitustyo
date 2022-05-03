@@ -78,7 +78,8 @@ class Play:
                 self.starie.jump = 0
 
     def draw_spikes(self):
-        self.spike_r = self.screen.blit(self.spike.spike, (self.spike.sp_x, 361))
+        self.spike_r = self.screen.blit(
+            self.spike.spike, (self.spike.sp_x, 361))
         self.spike.sp_x -= self.spike.speed
         if self.spike.sp_x < -50:
             self.spike.sp_x = 650

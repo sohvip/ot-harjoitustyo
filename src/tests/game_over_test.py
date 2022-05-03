@@ -8,4 +8,3 @@ class TestGameOver(unittest.TestCase):
 
     def test_final_score(self):
         self.assertEqual(self.end.score, 10)
-

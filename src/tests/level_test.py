@@ -20,7 +20,7 @@ class TestLevel(unittest.TestCase):
         self.play.spike.sp_x = -51
         self.play.draw_spikes()
         self.assertEqual(self.play.spike.sp_x, 650)
-    
+
     def test_spike_move_2(self):
         self.play.draw_spikes()
         self.assertEqual(self.play.spike.sp_x, 698.5)
@@ -29,7 +29,7 @@ class TestLevel(unittest.TestCase):
         self.play.background.bg_x = -640
         self.play.draw_bg()
         self.assertEqual(self.play.background.bg_x, 0)
-    
+
     def test_background_2(self):
         self.play.background.bg_x = 0.5
         self.play.draw_bg()
@@ -39,7 +39,7 @@ class TestLevel(unittest.TestCase):
         self.play.score = 5
         self.play.speed()
         self.assertEqual(self.play.spike.speed, 1.6)
-    
+
     def test_speed_2(self):
         self.play.score = 4
         self.play.spike.speed = 1.5
@@ -63,5 +63,3 @@ class TestLevel(unittest.TestCase):
         self.play.starie_action()
         self.assertEqual(self.play.starie.jumping, 0)
         self.assertEqual(self.play.starie.jump, 0)
-
-    

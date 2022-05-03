@@ -4,25 +4,43 @@ import os
 
 
 class Account:
+    '''Tietokannasta huolehtiva luokka.'''
+
     def __init__(self):
+        '''Luokan konstruktori. Luo tietokannan.'''
         self.path = self.check_path()
         self.database = sqlite3.connect(self.path)
         self.cursor = self.database.cursor()
         self.create_table()
 
     def check_path(self):
+        '''Selvittää tietokantaan johtavan polun.
+
+        Returns:
+            Palauttaa polun muuttujassa path.
+        '''
         dirname = os.path.dirname(os.path.abspath(__file__))
         filename = 'accounts.db'
         path = os.path.join(dirname, filename)
         return path
 
     def create_table(self):
+        '''Luo tietokantaan taulun Accounts mikäli sitä ei ole vielä olemassa'''
         text = '(id INTEGER PRIMARY KEY, username TEXT, password TEXT, highscore INTEGER)'
         self.cursor.execute(
             f'CREATE TABLE IF NOT EXISTS Accounts {text}')
         self.database.commit()
 
     def new_account(self, username, password):
+        '''Lisää uuden käyttäjän Accounts-tauluun, jos ehdot täyttyvät.
+
+        Args:
+            username: Käyttäjän syöttämä käyttäjänimi.
+            password: Käyttäjän syöttämä salasana.
+
+        Returns:
+            True, jos saman nimistä käyttäjää ei ole ennen olemassa, muuten False.
+        '''
         self.cursor.execute(
             'SELECT (password) from Accounts WHERE username = ?', (username, ))
         correct = self.cursor.fetchone()
@@ -42,6 +60,16 @@ class Account:
         # self.database.commit()
 
     def find_account(self, username, password):
+        '''Etsii käyttäjän Accounts-taulukosta ja katsoo täsmääkö salasana.
+
+        Args:
+            username: Käyttäjän syöttämä käyttäjänimi.
+            password: Käyttäjän syöttämä salasana.
+
+        Returns:
+            False, jos käyttäjää ei löydy tai jos salasana on väärin.
+            True, jos käyttäjä on olemassa ja salasana täsmää.
+        '''
         self.cursor.execute(
             'SELECT (password) from Accounts WHERE username = ?', (username, ))
         correct = self.cursor.fetchone()

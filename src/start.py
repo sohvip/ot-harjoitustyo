@@ -6,7 +6,10 @@ from assets_route import PLAY_FILE_PATH
 
 
 class Start:
+    '''Luokka, joka vastaa pelin aloitusnäkymästä.'''
+
     def __init__(self):
+        '''Luokan konstruktori, joka alustaa näkymän.'''
         self.screen = pygame.display.set_mode((640, 480))
         self.screen.fill((125, 60, 152))
         self.button = pygame.image.load(PLAY_FILE_PATH)
@@ -16,6 +19,7 @@ class Start:
         self.starie = Starie()
 
     def start(self):
+        '''Kutsuu jatkuvasti funktioita, jotka vastaavat näkymästä ja tapahtumista.'''
         pygame.init()
         pygame.display.set_caption('Starkour')
         while True:
@@ -23,12 +27,14 @@ class Start:
             self.get_events()
 
     def draw_screen(self):
+        '''Piirtää näkymään ja kutsuu funktiota, joka myös piirtää näkymään.'''
         self.screen.blit(self.button, (self.button_x, self.button_y))
         self.screen.blit(self.starie.starie, (170, 60))
         self.title()
         pygame.display.update()
 
     def title(self):
+        '''Muodostaa ja piirtää näkymän otsikkotekstin.'''
         font = pygame.font.SysFont('suruma', 90, True)
         color = (250, 253, 15)
         text = font.render('ST', False, color)
@@ -37,6 +43,8 @@ class Start:
         self.screen.blit(text_2, (270, 80))
 
     def get_events(self):  # pylint: disable=R0801
+        '''Vastaanottaa käyttäjän syötteitä ja toimii niiden mukaan.
+        Siirtää pelinäkymään, jos nappia painetaan.'''
         for event in pygame.event.get():  # pylint: disable=R0801
             if event.type == pygame.QUIT:  # pylint: disable=R0801
                 pygame.display.quit()  # pylint: disable=R0801

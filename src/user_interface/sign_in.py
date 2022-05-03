@@ -2,7 +2,16 @@ from tkinter import ttk
 
 
 class SignIn:
+    '''Rakentaa kirjautumisnäkymän.'''
+
     def __init__(self, root, login, sign_up):
+        '''Luokan konstruktori. Rakentaa kirjautumisnäkymän.
+
+        Args:
+            root: Tkinter-elementti, johon näkymä alustetaan.
+            login: Funktio, jota kutsutaan, kun login-nappia painetaan.
+            sign_up: Funktio, jota kutsutaan, kun sign up -nappia painetaan.
+        '''
         self.root = root
         self.frame = None
         self.username = None
@@ -12,6 +21,7 @@ class SignIn:
         self.set_up()
 
     def set_up(self):
+        '''Asettelee kirjautumisnäkymän elementit paikoilleen'''
         self.frame = ttk.Frame(master=self.root)
         heading = ttk.Label(master=self.frame, text='Sign In',
                             font=('calibre', 13, 'bold'))
@@ -32,4 +42,5 @@ class SignIn:
         self.frame.pack()
 
     def destroy(self):
+        '''Tuhoaa näkymän.'''
         self.frame.destroy()

@@ -6,23 +6,38 @@ from accounts import Account
 
 
 class UI:
+    '''Kirjautumis- ja rekisteröintinäkymien käyttöliittymä.'''
+
     def __init__(self, root):
+        '''Luokan konstruktori. Alustaa tietokantaluokan.
+
+        Args:
+            root:
+                Tkinter-elementti, johon näkymä alustetaan.
+            account:
+                alustaa Account-luokan, jossa tapahtuu tietokantaan tallentaminen
+        '''
         self.root = root
         self.current = None
         self.account = Account()
 
     def start(self):
+        '''Käyttöliittymän käynnistäminen.'''
         self.sign_in_view()
 
     def sign_in_view(self):
+        '''Tuhoaa nykyisen näkymän ja tuo esille kirjautumisnäkymän.'''
         self.destroy_current()
         self.current = SignIn(self.root, self.press_login, self.press_sign_up)
 
     def sign_up_view(self):
+        '''Tuhoaa nykyisen näkymän ja tuo esille rekisteröitymisnäkymän.'''
         self.destroy_current()
         self.current = SignUp(self.root, self.press_create, self.press_back)
 
     def press_login(self):
+        '''Kirjaa käyttäjän sisälle, jos käyttäjätunnus ja salasana täsmäävät.
+        Nykyinen näkymä tuhoutuu ja pelinäkymä avautuu.'''
         correct = not_empty(self.current.username.get(),
                             self.current.password.get())
         if correct:
@@ -37,6 +52,8 @@ class UI:
         self.sign_up_view()
 
     def press_create(self):
+        '''Luo uuden käyttäjän, jos käyttäjänimi on vapaana.
+        Kutsuu sitten kirjautumisnäkymäfunktiota.'''
         correct = not_empty(self.current.username.get(),
                             self.current.password.get())
         if correct:
@@ -49,6 +66,7 @@ class UI:
         self.sign_in_view()
 
     def destroy_current(self):
+        '''Tuhoaa näkymän, jos se on funktion kutsumishetkellä näkyvillä.'''
         if self.current:
             self.current.destroy()
         self.current = None

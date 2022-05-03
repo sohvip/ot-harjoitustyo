@@ -4,7 +4,7 @@
 ## Näin pelaat
 - hyppy = välilyöntinäppäin
 
-## Release-linkki
+## Release-linkit
 [viikko 5](https://github.com/sohvip/ot-harjoitustyo/releases/tag/viikko5)  
 [viikko 6](https://github.com/sohvip/ot-harjoitustyo/releases/tag/viikko6)  
 

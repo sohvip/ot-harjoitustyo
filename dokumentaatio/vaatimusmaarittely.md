@@ -3,8 +3,8 @@
 Sovellus on 2D-tasohyppelypeli, jossa tarkoituksena on saada mahdollisimman korkea pistemäärä. Pelaajan paras suoritus tallennetaan.
 ## Toiminnallisuudet
 ### Ennen kirjautumista
-- käyttäjätunnuksen luominen
-- kirjautuminen sisään olemassaolevalla käyttäjätunnuksella
+- käyttäjätunnuksen luominen (tehty)
+- kirjautuminen sisään olemassaolevalla käyttäjätunnuksella (tehty)
 ### Kirjautumisen jälkeen
 - aloitusruutu (tehty)
 - tason pelaaminen (tehty)

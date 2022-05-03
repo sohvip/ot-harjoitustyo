@@ -12,6 +12,7 @@
 [tuntikirjanpito.md](https://github.com/sohvip/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)  
 [changelog.md](https://github.com/sohvip/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)  
 [arkkitehtuuri.md](https://github.com/sohvip/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)  
+[kayttoohje.md](https://github.com/sohvip/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)  
 
 ## Käynnistys
 - asenna poetry: `poetry install`

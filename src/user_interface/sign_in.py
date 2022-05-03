@@ -5,10 +5,10 @@ class SignIn:
     def __init__(self, root, login, sign_up):
         self.root = root
         self.frame = None
-        self.login = login
-        self.sign_up = sign_up
         self.username = None
+        self.login = login
         self.password = None
+        self.sign_up = sign_up
         self.set_up()
 
     def set_up(self):

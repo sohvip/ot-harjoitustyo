@@ -17,8 +17,9 @@ class Account:
         return path
 
     def create_table(self):
+        text = '(id INTEGER PRIMARY KEY, username TEXT, password TEXT, highscore INTEGER)'
         self.cursor.execute(
-            'CREATE TABLE IF NOT EXISTS Accounts (id INTEGER PRIMARY KEY, username TEXT, password TEXT, highscore INTEGER)')
+            f'CREATE TABLE IF NOT EXISTS Accounts {text}')
         self.database.commit()
 
     def new_account(self, username, password):
@@ -27,7 +28,8 @@ class Account:
         correct = self.cursor.fetchone()
         if correct is None:
             self.cursor.execute(
-                'INSERT INTO Accounts (username, password, highscore) VALUES (?, ?, 0)', (username, password))
+                'INSERT INTO Accounts (username, password, highscore) VALUES (?, ?, 0)',
+                (username, password))
             self.database.commit()
             messagebox.showinfo('', 'Account created')
             return True

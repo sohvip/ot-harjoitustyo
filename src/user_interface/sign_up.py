@@ -13,17 +13,17 @@ class SignUp:
 
     def set_up(self):
         self.frame = ttk.Frame(master=self.root)
-        heading = ttk.Label(master=self.frame, text='Sign Up',
+        sign_up = ttk.Label(master=self.frame, text='Sign Up',
                             font=('calibre', 13, 'bold'))
-        text_1 = ttk.Label(master=self.frame, text='Username')
+        text = ttk.Label(master=self.frame, text='Username')
         text_2 = ttk.Label(master=self.frame, text='Password')
         self.username = ttk.Entry(master=self.frame)
         self.password = ttk.Entry(master=self.frame, show='*')
         create = ttk.Button(master=self.frame,
                             text='Create', command=self.create)
         back = ttk.Button(master=self.frame, text='Back', command=self.back)
-        heading.pack()
-        text_1.pack()
+        sign_up.pack()
+        text.pack()
         self.username.pack()
         text_2.pack()
         self.password.pack()

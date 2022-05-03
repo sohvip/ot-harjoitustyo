@@ -6,6 +6,7 @@
 
 ## Release-linkki
 [viikko 5](https://github.com/sohvip/ot-harjoitustyo/releases/tag/viikko5)
+[viikko 6](https://github.com/sohvip/ot-harjoitustyo/releases/tag/viikko6)  
 
 ## Dokumentaatio 
 [vaatimusmaarittely.md](https://github.com/sohvip/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)  

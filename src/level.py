@@ -1,4 +1,3 @@
-from re import A
 import sys
 import pygame
 from game_over import End
@@ -17,7 +16,6 @@ class Play:
         self.background = Background()
         self.starie = Starie()
         self.spike = Spike()
-        self.clock = pygame.time.Clock()
         self.score = 0
         self.starie_r = 0
         self.spike_r = 0
@@ -25,9 +23,10 @@ class Play:
 
     def gameloop(self):
         '''Kutsuu jatkuvasti funktioita, jotka vastaavat näkymästä ja pelin toiminnallisuudesta.'''
+        clock = pygame.time.Clock()
         pygame.init()
         while True:
-            self.clock.tick(200)
+            clock.tick(200)
             self.get_events()
             self.draw()
             self.starie_action()
@@ -80,7 +79,7 @@ class Play:
         color = (255, 255, 255)
         text = font.render(f'score: {str(self.score)}', False, color)
         self.screen.blit(text, (550, 10))
-    
+
     def draw_highscore(self):
         account = Account()
         highscore = account.get_highscore(self.user)

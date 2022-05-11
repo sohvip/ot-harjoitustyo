@@ -53,9 +53,10 @@ class Account:
             return True
         messagebox.showinfo('', 'Account already exists')
         return False
-    
+
     def check_highscore(self, score, username):
-        self.cursor.execute('SELECT (highscore) from Accounts WHERE username = ?', (username, ))
+        self.cursor.execute(
+            'SELECT (highscore) from Accounts WHERE username = ?', (username, ))
         highscore = self.cursor.fetchone()
         highscore = highscore[0]
         if score > highscore:
@@ -64,11 +65,13 @@ class Account:
         return highscore
 
     def new_highscore(self, score, username):
-        self.cursor.execute(f'UPDATE Accounts SET highscore = {score} WHERE username = "{username}"')
+        self.cursor.execute(
+            f'UPDATE Accounts SET highscore = {score} WHERE username = "{username}"')
         self.database.commit()
-    
+
     def get_highscore(self, username):
-        self.cursor.execute('SELECT (highscore) from Accounts WHERE username = ?', (username, ))
+        self.cursor.execute(
+            'SELECT (highscore) from Accounts WHERE username = ?', (username, ))
         highscore = self.cursor.fetchone()
         highscore = highscore[0]
         return highscore

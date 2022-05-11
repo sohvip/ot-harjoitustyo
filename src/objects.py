@@ -25,6 +25,7 @@ class Spike:
         self.sp_x = 700
         self.speed = 1.5
 
+
 class SignOut:
     def __init__(self):
         self.sign_out = pygame.image.load(SIGN_OUT_FILE_PATH)

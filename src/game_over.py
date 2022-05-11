@@ -2,7 +2,6 @@ import sys
 import pygame
 from assets_route import RESTART_FILE_PATH, HOME_FILE_PATH
 from accounts import Account
-from tkinter import Tk
 from objects import SignOut
 
 
@@ -65,7 +64,7 @@ class End:
 
     def highscore(self):
         account = Account()
-        highscore = account.check_highscore(self.score,self.user)
+        highscore = account.check_highscore(self.score, self.user)
         font = pygame.font.SysFont('suruma', 30)
         color = (250, 253, 15)
         sentence = f'highscore: {str(highscore)}'
@@ -94,12 +93,6 @@ class End:
                     pygame.display.quit()
                 elif (event.pos[0] in range(292, 292+self.sign_out.size) and
                         event.pos[1] in range(302+self.width, 302+self.width+self.sign_out.size)):
-                    from user_interface.user_interface import UI
-                    window = Tk()
-                    window.title('Starkour')
-                    window.geometry('640x480')
-                    window.configure(bg='#8B5499')
-                    sign_in = UI(window)
-                    sign_in.start()
+                    import index
                     pygame.display.quit()
-                    window.mainloop()
+                    index.main()

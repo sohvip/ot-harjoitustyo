@@ -6,6 +6,7 @@ def main():
     window = Tk()
     window.title('Starkour')
     window.geometry('640x480')
+    window.configure(bg='#8B5499')
     sign_in = UI(window)
     sign_in.start()
     window.mainloop()

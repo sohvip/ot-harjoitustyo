@@ -8,7 +8,7 @@ from assets_route import PLAY_FILE_PATH
 class Start:
     '''Luokka, joka vastaa pelin aloitusnäkymästä.'''
 
-    def __init__(self):
+    def __init__(self, user):
         '''Luokan konstruktori, joka alustaa näkymän.'''
         self.screen = pygame.display.set_mode((640, 480))
         self.screen.fill((125, 60, 152))
@@ -17,6 +17,7 @@ class Start:
         self.button_x = 320-(self.button.get_width()/2)
         self.button_y = 240-(self.button.get_height()/2)
         self.starie = Starie()
+        self.user = user
 
     def start(self):
         '''Kutsuu jatkuvasti funktioita, jotka vastaavat näkymästä ja tapahtumista.'''
@@ -54,6 +55,6 @@ class Start:
                     range(int(self.button_x), int(self.button_x+self.button.get_width())) and
                     event.pos[1] in
                         range(int(self.button_y), int(self.button_y+self.button.get_height()))):
-                    play = Play()
+                    play = Play(self.user)
                     play.gameloop()
                     pygame.display.quit()

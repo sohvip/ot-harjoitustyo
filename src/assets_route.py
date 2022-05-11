@@ -19,3 +19,6 @@ RESTART_FILE_PATH = os.path.join(dirname, 'assets', RESTART_FILENAME)
 
 HOME_FILENAME = 'home.png'
 HOME_FILE_PATH = os.path.join(dirname, 'assets', HOME_FILENAME)
+
+SIGN_OUT_FILENAME = 'signout.png'
+SIGN_OUT_FILE_PATH = os.path.join(dirname, 'assets', SIGN_OUT_FILENAME)

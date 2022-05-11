@@ -1,12 +1,15 @@
 import sys
 import pygame
 from assets_route import RESTART_FILE_PATH, HOME_FILE_PATH
+from accounts import Account
+from tkinter import Tk
+from objects import SignOut
 
 
 class End:
     '''Luokka, joka vastaa game over -näkymästä.'''
 
-    def __init__(self, score):
+    def __init__(self, score, user):
         '''Luokan konstruktori, joka alustaa näkymän.
 
         Args:
@@ -20,6 +23,8 @@ class End:
         self.home = pygame.image.load(HOME_FILE_PATH)
         self.home = pygame.transform.rotozoom(self.home, 0, 0.15)
         self.width = self.restart.get_width()
+        self.user = user
+        self.sign_out = SignOut()
 
     def end_screen(self):
         '''Kutsuu jatkuvasti funktioita, jotka vastaavat näkymästä ja tapahtumista.'''
@@ -34,12 +39,14 @@ class End:
         self.title()
         self.final_score()
         self.draw_buttons()
+        self.highscore()
         pygame.display.update()
 
     def draw_buttons(self):
         '''Piirtää napit.'''
         self.screen.blit(self.restart, (310-self.width, 260))
         self.screen.blit(self.home, (330, 260))
+        self.screen.blit(self.sign_out.sign_out, (292, 302+self.width))
 
     def title(self):
         '''Määrittelee ja piirtää tekstin näkymään.'''
@@ -54,7 +61,16 @@ class End:
         color = (250, 253, 15)
         sentence = f'final score: {str(self.score)}'
         text = font.render(sentence, False, color)
-        self.screen.blit(text, (240, 180))
+        self.screen.blit(text, (240, 160))
+
+    def highscore(self):
+        account = Account()
+        highscore = account.check_highscore(self.score,self.user)
+        font = pygame.font.SysFont('suruma', 30)
+        color = (250, 253, 15)
+        sentence = f'highscore: {str(highscore)}'
+        text = font.render(sentence, False, color)
+        self.screen.blit(text, (240, 200))
 
     def get_events(self):  # pylint: disable=R0801
         '''Vastaanottaa käyttäjän syötteitä ja toimii niiden mukaan.
@@ -67,14 +83,23 @@ class End:
                 if (event.pos[0] in range(310-self.width, 310) and
                         event.pos[1] in range(260, 260+self.width)):
                     from level import Play
-                    play = Play()
+                    play = Play(self.user)
                     play.gameloop()
                     pygame.display.quit()
-
-            if event.type == pygame.MOUSEBUTTONDOWN:
-                if (event.pos[0] in range(330, 330+self.width) and
+                elif (event.pos[0] in range(330, 330+self.width) and
                         event.pos[1] in range(260, 260+self.width)):
                     from start import Start
-                    start = Start()
+                    start = Start(self.user)
                     start.start()
                     pygame.display.quit()
+                elif (event.pos[0] in range(292, 292+self.sign_out.size) and
+                        event.pos[1] in range(302+self.width, 302+self.width+self.sign_out.size)):
+                    from user_interface.user_interface import UI
+                    window = Tk()
+                    window.title('Starkour')
+                    window.geometry('640x480')
+                    window.configure(bg='#8B5499')
+                    sign_in = UI(window)
+                    sign_in.start()
+                    pygame.display.quit()
+                    window.mainloop()

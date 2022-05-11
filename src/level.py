@@ -1,13 +1,15 @@
+from re import A
 import sys
 import pygame
 from game_over import End
+from accounts import Account
 from objects import Background, Starie, Spike
 
 
 class Play:
     '''Luokka, joka vastaa pelin peliosuudesta.'''
 
-    def __init__(self):
+    def __init__(self, user):
         '''Luokan konstruktori. Alustaa pelinäkymän.'''
         self.screen = pygame.display.set_mode((640, 480))
         pygame.display.set_caption('Starkour')
@@ -19,6 +21,7 @@ class Play:
         self.score = 0
         self.starie_r = 0
         self.spike_r = 0
+        self.user = user
 
     def gameloop(self):
         '''Kutsuu jatkuvasti funktioita, jotka vastaavat näkymästä ja pelin toiminnallisuudesta.'''
@@ -51,6 +54,7 @@ class Play:
         self.draw_starie()
         self.draw_spikes()
         self.draw_score()
+        self.draw_highscore()
 
         pygame.display.flip()
 
@@ -76,6 +80,14 @@ class Play:
         color = (255, 255, 255)
         text = font.render(f'score: {str(self.score)}', False, color)
         self.screen.blit(text, (550, 10))
+    
+    def draw_highscore(self):
+        account = Account()
+        highscore = account.get_highscore(self.user)
+        font = pygame.font.SysFont('suruma', 20)
+        color = (255, 255, 255)
+        text = font.render(f'highscore: {str(highscore)}', False, color)
+        self.screen.blit(text, (519, 30))
 
     def starie_action(self):
         '''Vastaa siitä, miten pelihahmo hyppy etenee.'''
@@ -102,7 +114,7 @@ class Play:
         '''Tarkistaa törmääkö pelihahmo estepiikkiin.
         Jos näin käy, nykyinen näkymä suljetaan ja game over -näkymä aukeaa.'''
         if self.starie_r.colliderect(self.spike_r):
-            end = End(self.score)
+            end = End(self.score, self.user)
             end.end_screen()
             pygame.display.quit()
 

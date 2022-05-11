@@ -44,8 +44,9 @@ class UI:
             correct_2 = self.account.find_account(
                 self.current.username.get(), self.current.password.get())
             if correct_2:
+                user = self.current.username.get()
                 self.root.destroy()
-                start = Start()
+                start = Start(user)
                 start.start()
 
     def press_sign_up(self):

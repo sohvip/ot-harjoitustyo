@@ -1,5 +1,5 @@
 import pygame
-from assets_route import BG_FILE_PATH, STARIE_FILE_PATH, SPIKE_FILE_PATH
+from assets_route import BG_FILE_PATH, STARIE_FILE_PATH, SPIKE_FILE_PATH, SIGN_OUT_FILE_PATH
 
 
 class Background:
@@ -24,3 +24,9 @@ class Spike:
         self.spike = pygame.transform.rotozoom(self.spike, 0, 0.6)
         self.sp_x = 700
         self.speed = 1.5
+
+class SignOut:
+    def __init__(self):
+        self.sign_out = pygame.image.load(SIGN_OUT_FILE_PATH)
+        self.sign_out = pygame.transform.rotozoom(self.sign_out, 0, 0.11)
+        self.size = self.sign_out.get_width()

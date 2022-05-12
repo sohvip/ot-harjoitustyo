@@ -43,7 +43,7 @@ class Start:
         text_2 = font.render('RKOUR', False, color)
         self.screen.blit(text, (60, 80))
         self.screen.blit(text_2, (270, 80))
-    
+
     def sign_out(self):
         '''Piirtää uloskirjautumisnapin näkymään.'''
         sign_out = SignOut()

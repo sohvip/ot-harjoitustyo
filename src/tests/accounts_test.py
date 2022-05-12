@@ -7,10 +7,6 @@ class TestAccounts(unittest.TestCase):
     def setUp(self):
         self.account = Account()
 
-    def test_check_path(self):
-        path = self.account.check_path()
-        self.assertEqual(path, '/home/psohvi/ot-harjoitustyo/src/accounts.db')
-
     def test_new_account(self):
         test = self.account.new_account('sohvi', '123')
         self.assertEqual(test, False)

@@ -15,7 +15,8 @@ class Starie:
     '''Luokka, joka määrittelee pelihahmon.'''
 
     def __init__(self):
-        '''Luokan konstruktori. Lataa kuvan ja muuttaa sen kokoa, sekä antaa tarvittavia muuttuja-arvoja.'''
+        '''Luokan konstruktori.
+        Lataa kuvan ja muuttaa sen kokoa, sekä antaa tarvittavia muuttuja-arvoja.'''
         self.starie = pygame.image.load(STARIE_FILE_PATH)
         self.starie = pygame.transform.rotozoom(self.starie, 0, 0.6)
         self.s_y = 318
@@ -28,7 +29,8 @@ class Spike:
     '''Luokka, joka määrittelee pelin esteet.'''
 
     def __init__(self):
-        '''Luokan konstruktori. Lataa kuvan ja muuttaa sen kokoa, sekä antaa tarvittavia muuttuja-arvoja.'''
+        '''Luokan konstruktori.
+        Lataa kuvan ja muuttaa sen kokoa, sekä antaa tarvittavia muuttuja-arvoja.'''
         self.spike = pygame.image.load(SPIKE_FILE_PATH)
         self.spike = pygame.transform.rotozoom(self.spike, 0, 0.6)
         self.sp_x = 700
@@ -39,7 +41,8 @@ class SignOut:
     '''Luokka, joka määrittelee uloskirjautumisnapin.'''
 
     def __init__(self):
-        '''Luokan konstruktori. Lataa kuvan ja muuttaa sen kokoa, sekä tallentaa kuvan leveyden muuttujaan.'''
+        '''Luokan konstruktori.
+        Lataa kuvan ja muuttaa sen kokoa, sekä tallentaa kuvan leveyden muuttujaan.'''
         self.sign_out = pygame.image.load(SIGN_OUT_FILE_PATH)
         self.sign_out = pygame.transform.rotozoom(self.sign_out, 0, 0.11)
         self.size = self.sign_out.get_width()

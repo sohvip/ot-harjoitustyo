@@ -4,7 +4,7 @@ from level import Play
 
 class TestLevel(unittest.TestCase):
     def setUp(self):
-        self.play = Play()
+        self.play = Play('sohvi')
 
     def test_jump(self):
         self.play.starie_jump()

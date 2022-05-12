@@ -62,7 +62,9 @@ class Account:
             username: Pelaajan käyttäjänimi.
 
         Returns:
-            Palauttaa pelaajan viimeisimmän pelikerran pisteet, jos ne ovat korkeammat kuin pelaajan sen hetkinen ennätys, muuten palauttaa pelaajan enätyksen.
+            Palauttaa pelaajan viimeisimmän pelikerran pisteet,
+            jos ne ovat korkeammat kuin pelaajan sen hetkinen ennätys,
+            muuten palauttaa pelaajan enätyksen.
         '''
         self.cursor.execute(
             'SELECT (highscore) from Accounts WHERE username = ?', (username, ))
@@ -77,7 +79,7 @@ class Account:
         '''Tallentaa pelaajan uudet ennätyspisteet tietokantaan.
 
         Args:
-            score: Pelaajan viimeisimmän pelikerran pisteet eli tässä tapauksessa myös ennätyspisteet.
+            score: Pelaajan viimeisimmän pelikerran pisteet.
             username: Pelaajan käyttäjänimi.
         '''
         self.cursor.execute(

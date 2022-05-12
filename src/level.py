@@ -81,6 +81,7 @@ class Play:
         self.screen.blit(text, (550, 10))
 
     def draw_highscore(self):
+        '''Kutsuu funktiota, joka selvittää nykyiset ennätyspisteet ja piirtää sen näkymään.'''
         account = Account()
         highscore = account.get_highscore(self.user)
         font = pygame.font.SysFont('suruma', 20)

@@ -63,6 +63,7 @@ class End:
         self.screen.blit(text, (240, 160))
 
     def highscore(self):
+        '''Määrittelee ja piirtää pelaajan ennätyspisteet näkymään.'''
         account = Account()
         highscore = account.check_highscore(self.score, self.user)
         font = pygame.font.SysFont('suruma', 30)

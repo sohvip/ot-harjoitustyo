@@ -55,6 +55,15 @@ class Account:
         return False
 
     def check_highscore(self, score, username):
+        '''Hakee pelaajan ennätyspisteet ja vertaa niitä uusiin pisteisiin.
+
+        Args:
+            score: Pelaajan viimeisimmän pelikerran pisteet.
+            username: Pelaajan käyttäjänimi.
+
+        Returns:
+            Palauttaa pelaajan viimeisimmän pelikerran pisteet, jos ne ovat korkeammat kuin pelaajan sen hetkinen ennätys, muuten palauttaa pelaajan enätyksen.
+        '''
         self.cursor.execute(
             'SELECT (highscore) from Accounts WHERE username = ?', (username, ))
         highscore = self.cursor.fetchone()
@@ -65,11 +74,25 @@ class Account:
         return highscore
 
     def new_highscore(self, score, username):
+        '''Tallentaa pelaajan uudet ennätyspisteet tietokantaan.
+
+        Args:
+            score: Pelaajan viimeisimmän pelikerran pisteet eli tässä tapauksessa myös ennätyspisteet.
+            username: Pelaajan käyttäjänimi.
+        '''
         self.cursor.execute(
             f'UPDATE Accounts SET highscore = {score} WHERE username = "{username}"')
         self.database.commit()
 
     def get_highscore(self, username):
+        '''Hakee tietokannasta pelaajan senhetkiset ennätyspisteet.
+
+        Args:
+            username: Pelaajan käyttäjänimi.
+
+        Returns:
+            Palauttaa pelaajan senhetkiset ennätyspisteet.
+        '''
         self.cursor.execute(
             'SELECT (highscore) from Accounts WHERE username = ?', (username, ))
         highscore = self.cursor.fetchone()

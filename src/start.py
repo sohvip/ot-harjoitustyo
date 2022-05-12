@@ -1,7 +1,7 @@
 import sys
 import pygame
 from level import Play
-from objects import Starie
+from objects import Starie, SignOut
 from assets_route import PLAY_FILE_PATH
 
 
@@ -32,6 +32,7 @@ class Start:
         self.screen.blit(self.button, (self.button_x, self.button_y))
         self.screen.blit(self.starie.starie, (170, 60))
         self.title()
+        self.sign_out()
         pygame.display.update()
 
     def title(self):
@@ -42,6 +43,11 @@ class Start:
         text_2 = font.render('RKOUR', False, color)
         self.screen.blit(text, (60, 80))
         self.screen.blit(text_2, (270, 80))
+    
+    def sign_out(self):
+        '''Piirtää uloskirjautumisnapin näkymään.'''
+        sign_out = SignOut()
+        self.screen.blit(sign_out.sign_out, (580, 420))
 
     def get_events(self):  # pylint: disable=R0801
         '''Vastaanottaa käyttäjän syötteitä ja toimii niiden mukaan.
@@ -58,3 +64,8 @@ class Start:
                     play = Play(self.user)
                     play.gameloop()
                     pygame.display.quit()
+                elif (event.pos[0] in range(580, 637) and
+                        event.pos[1] in range(420, 477)):
+                    import index
+                    pygame.display.quit()
+                    index.main()

@@ -3,6 +3,7 @@ from user_interface.user_interface import UI
 
 
 def main():
+    '''Alustaa kirjautumisikkunan ja kutsuu sen näkyviin.'''
     window = Tk()
     window.title('Starkour')
     window.geometry('640x480')

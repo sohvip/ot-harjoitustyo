@@ -1,5 +1,5 @@
 # Käyttöohje
-Lataa sovelluksen lähdekoodi viimeisimmästä releasesta.
+Lataa sovelluksen lähdekoodi viimeisimmästä releasesta. Löydät sen GitHub-repositorion kohdasta **Releases**.
 ## Sovelluksen käynnistäminen
 Ennen käynnistämistä asenna poetry: `poetry install`  
 Käynnistä sovellus : `poetry run invoke start`

@@ -6,4 +6,5 @@
 |6.-12.4.|7 h|aloitus ja lopetusnäkymät tehty, pistelaskuri, lisää testejä, pylint käyttöön|
 |20.-26.4.|5 h|näkymien välillä liikkumista laajennettu, uusia testejä, koodin laadun parantamista|
 |27.4.-3.5.|10 h|sisäänkirjautuminen ja uuden käyttäjän luominen, tallentaminen tietokantaan, uusia testejä|
-|yhteensä|30,5 h||
+|4.-13.5.|8 h|uloskirjautuminen ja ennätyspisteiden tallentaminen tietokantaan, testejä|
+|yhteensä|38,5 h||

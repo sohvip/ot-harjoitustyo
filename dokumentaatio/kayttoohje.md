@@ -11,6 +11,8 @@ Tämän jälkeen painamalla **`Sign In`**-nappia käyttäjä pääsee pelin aloi
 ## Pelin pelaaminen
 Pelin aloitusnäkymästä pääsee peliin painamalla keltaista nappia ruudun keskellä. Pelin tarkoituksena on yrittää hypätä mahdollisimman monen piikin yli.    
 Pelihahmon saa hyppäämään painamalla välilyöntinäppäintä. Jokainen onnistunut hyppy piikin yli tuo pelaajalle yhden pisteen. Hahmon liikkumisnopeus kasvaa joka viidennen pisteen kohdalla eli kun pistemäärä on 5, 10, 15 jne. Kun pelihahmo osuu piikkiin, peli loppuu ja näkyviin tulee *Game Over* -näkymä.  
-Pelaajan keräämät pisteet näkyvät ruudulla ja pisteiden alla on kaksi nappia. Vasemmalla olevasta napista painamalla pääsee uuteen peliin ja oikeanpuoleisesta takaisin pelin aloitusnäkymään.
+Pelaajan keräämät pisteet näkyvät ruudulla ja pisteiden alla on kaksi keltaista nappia. Vasemmalla olevasta napista painamalla pääsee uuteen peliin ja oikeanpuoleisesta takaisin pelin aloitusnäkymään.
+## Uloskirjautuminen
+Uloskirjautuminen onnistuu painamalla violettia nappia, jossa on ovi ja nuoli. Tällainen nappi löytyy sekä pelin aloitusnäkymän oikeasta alakulmasta että *Game Over* -näkymästä. Napin painaminen vie pelaajan takaisin *Sign In* -näkymään.
 ## Sovelluksesta poistuminen
 Sovelluksesta voi poistua koska tahansa painamalla oikeassa yläkulmassa olevaa punaista raksia.

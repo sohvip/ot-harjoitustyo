@@ -115,7 +115,6 @@ class Play:
         Jos näin käy, nykyinen näkymä suljetaan ja game over -näkymä aukeaa.'''
         if self.starie_r.colliderect(self.spike_r):
             end = End(self.score, self.user)
-            pygame.display.quit()
             end.end_screen()
 
     def speed(self):

@@ -85,13 +85,11 @@ class End:
                     from level import Play
                     play = Play(self.user)
                     play.gameloop()
-                    pygame.display.quit()
                 elif (event.pos[0] in range(330, 330+self.width) and
                         event.pos[1] in range(260, 260+self.width)):
                     from start import Start
                     start = Start(self.user)
                     start.start()
-                    pygame.display.quit()
                 elif (event.pos[0] in range(292, 292+self.sign_out.size) and
                         event.pos[1] in range(302+self.width, 302+self.width+self.sign_out.size)):
                     import index

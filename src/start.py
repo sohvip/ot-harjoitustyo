@@ -62,7 +62,6 @@ class Start:
                     event.pos[1] in
                         range(int(self.button_y), int(self.button_y+self.button.get_height()))):
                     play = Play(self.user)
-                    pygame.display.quit()
                     play.gameloop()
                 elif (event.pos[0] in range(580, 637) and
                         event.pos[1] in range(420, 477)):

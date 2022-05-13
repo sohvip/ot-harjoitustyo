@@ -1,4 +1,8 @@
 # Käyttöohje
+Lataa sovelluksen lähdekoodi viimeisimmästä releasesta.
+## Sovelluksen käynnistäminen
+Ennen käynnistämistä asenna poetry: `poetry install`  
+Käynnistä sovellus : `poetry run invoke start`
 ## Uuden käyttäjän luominen
 Sovellus on avautuessaan *Sign In* -näkymässä. Uuden käyttäjän pääsee luomaan painamalla näytöllä näkyvää **`Sign Up`**-nappia. 
 Napin painaminen vaihtaa näkymän *Sign Up* -näkymään, jossa käyttäjä voi asettaa valitsemansa käyttäjänimen ja salasanan niille tarkoitettuihin tekstikenttiin. 

@@ -72,7 +72,7 @@ class End:
         text = font.render(sentence, False, color)
         self.screen.blit(text, (240, 200))
 
-    def get_events(self):  # pylint: disable=R0801
+    def get_events(self):  # pylint: disable=R0801 # pragma: no cover
         '''Vastaanottaa käyttäjän syötteitä ja toimii niiden mukaan.
         Siirtää näkymästä toiseen, jos nappia painetaan.'''
         for event in pygame.event.get():  # pylint: disable=R0801

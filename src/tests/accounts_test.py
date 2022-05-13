@@ -29,3 +29,19 @@ class TestAccounts(unittest.TestCase):
     def test_find_account_3(self):
         test = self.account.find_account('sohva', '123')
         self.assertEqual(test, False)
+
+    def test_check_highscore(self):
+        score = self.account.check_highscore(0, 'testi')
+        self.assertEqual(score, 1)
+    
+    def test_check_highscore_2(self):
+        score = self.account.check_highscore(5, 'testi')
+        self.account.cursor.execute(
+            "UPDATE Accounts SET highscore = 1 WHERE username = 'testi'"
+        )
+        self.account.database.commit()
+        self.assertEqual(score, 5)
+
+    def test_get_highscore(self):
+        highscore = self.account.get_highscore('testi')
+        self.assertEqual(highscore, 1)

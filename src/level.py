@@ -32,7 +32,7 @@ class Play:
             self.starie_action()
             self.collide()
 
-    def get_events(self):
+    def get_events(self): # pragma: no cover
         '''Vastaanottaa käyttäjän syötteitä ja toimii niiden mukaan.'''
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -115,8 +115,8 @@ class Play:
         Jos näin käy, nykyinen näkymä suljetaan ja game over -näkymä aukeaa.'''
         if self.starie_r.colliderect(self.spike_r):
             end = End(self.score, self.user)
-            end.end_screen()
             pygame.display.quit()
+            end.end_screen()
 
     def speed(self):
         '''Säätelee pelihahmon vauhtia pistemäärän mukaan.'''

@@ -49,7 +49,7 @@ class Start:
         sign_out = SignOut()
         self.screen.blit(sign_out.sign_out, (580, 420))
 
-    def get_events(self):  # pylint: disable=R0801
+    def get_events(self):  # pylint: disable=R0801 # pragma: no cover
         '''Vastaanottaa käyttäjän syötteitä ja toimii niiden mukaan.
         Siirtää pelinäkymään, jos nappia painetaan.'''
         for event in pygame.event.get():  # pylint: disable=R0801
@@ -62,8 +62,8 @@ class Start:
                     event.pos[1] in
                         range(int(self.button_y), int(self.button_y+self.button.get_height()))):
                     play = Play(self.user)
-                    play.gameloop()
                     pygame.display.quit()
+                    play.gameloop()
                 elif (event.pos[0] in range(580, 637) and
                         event.pos[1] in range(420, 477)):
                     import index

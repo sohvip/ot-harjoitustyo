@@ -14,6 +14,7 @@
 [changelog.md](https://github.com/sohvip/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)  
 [arkkitehtuuri.md](https://github.com/sohvip/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)  
 [kayttoohje.md](https://github.com/sohvip/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)  
+[testaus.md](https://github.com/sohvip/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)  
 
 ## Käynnistys
 - asenna poetry: `poetry install`

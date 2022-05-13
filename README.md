@@ -5,7 +5,7 @@
 - hyppy = välilyöntinäppäin
 
 ## Release-linkit
-[loppupalautus](https://github.com/sohvip/ot-harjoitustyo/releases/tag/loppupalautus)
+[loppupalautus](https://github.com/sohvip/ot-harjoitustyo/releases/tag/loppupalautus)  
 [viikko 6](https://github.com/sohvip/ot-harjoitustyo/releases/tag/viikko6)  
 [viikko 5](https://github.com/sohvip/ot-harjoitustyo/releases/tag/viikko5) 
 

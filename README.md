@@ -1,5 +1,9 @@
 # Starkour  
-2D-tasohyppelypeli, jossa tavoitteena hypätä mahdollisimman monen esteen yli.
+2D-tasohyppelypeli, jossa tavoitteena hypätä mahdollisimman monen esteen yli.  
+  
+![Screenshot from 2023-02-05 19-00-48](https://user-images.githubusercontent.com/95978191/216833384-bb9cdd3c-d351-4d6f-b035-c37c8b196163.png)
+![Screenshot from 2023-02-05 19-02-09](https://user-images.githubusercontent.com/95978191/216833386-03bbf8dc-9b6e-4552-8db8-7d9c901ae563.png)
+![Screenshot from 2023-02-05 19-02-21](https://user-images.githubusercontent.com/95978191/216833394-08f8b154-3aaa-41ed-9e88-5a58f9c26e82.png)
 
 ## Näin pelaat
 - hyppy = välilyöntinäppäin
